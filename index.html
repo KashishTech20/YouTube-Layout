@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Clone</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+<body>
+ 
+<header class="navbar">
+
+<div class="left-nav">
+    <i class="fa-solid fa-bars menu"></i>
+
+    <div class="logo">
+        <i class="fa-brands fa-youtube"></i>
+        <span>YouTube</span>
+    </div>
+</div>
+
+<div class="search-box">
+    <input type="text" placeholder="Search">
+    <button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</div>
+
+<div class="right-nav">
+
+    <button class="create-btn">
+        <i class="fa-solid fa-plus"></i>
+        Create
+    </button>
+    <button id="themeToggle" class="theme-btn">
+    🌙
+    </button>
+
+    <i class="fa-regular fa-bell"></i>
+
+    <img src="https://i.pravatar.cc/40" alt="">
+</div>
+
+</header>
+
+<!-- Main Layout -->
+<div class="container">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+
+<div class="sidebar-item active">
+    <i class="fa-solid fa-house"></i>
+    Home
+</div>
+
+<div class="sidebar-item">
+    <i class="fa-solid fa-bolt"></i>
+    Shorts
+</div>
+
+<div class="sidebar-item">
+    <i class="fa-solid fa-photo-film"></i>
+    Subscriptions
+</div>
+
+<hr>
+
+<div class="sidebar-item">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    History
+</div>
+
+<div class="sidebar-item">
+    <i class="fa-solid fa-list"></i>
+    Playlists
+</div>
+
+<div class="sidebar-item">
+    <i class="fa-solid fa-thumbs-up"></i>
+    Liked Videos
+</div>
+
+</aside>
+
+<!-- Content -->
+<main class="content">
+
+<!-- Categories -->
+<div class="categories">
+
+<button class="active-chip" onclick="filterVideos('all')">All</button>
+<button  onclick="filterVideos('music')">Music</button>
+<button onclick="filterVideos('gaming')">Gaming</button>
+<button onclick="filterVideos('web')">Web Development</button>
+<button onclick="filterVideos('series')">Web Series</button>
+<button onclick="filterVideos('comic')">Comic Books</button>
+<button>Live</button>
+<button>Anime</button>
+
+</div>
+
+<!-- Videos -->
+
+ <div class="video-grid">
+
+    <!-- Card 1 -->
+    <div class="video-card web">
+        <img src="Card1.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=10">
+
+            <div>
+                <h4>Claude Code SEO: Why is NO ONE talking about this (100% FREE)</h4>
+                <p>Code Studio</p>
+                <span>1.2M views • 3 months ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="video-card web">
+        <img src="Card2.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=20">
+
+            <div>
+                <h4>Digital Marketing with AI</h4>
+                <p>WS3 Tech</p>
+                <span>800K views • 2 weeks ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="video-card comic">
+        <img src="Card3.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=30">
+
+            <div>
+                <h4>Masha and the Bear</h4>
+                <p>Cartoon</p>
+                <span>500K views • 1 month ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="video-card series">
+        <img src="Card4.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=40">
+
+            <div>
+                <h4>Taarak Mehta Ka Oltha Chashma</h4>
+                <p>Sony Plus</p>
+                <span>2M views • 5 months ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="video-card gaming">
+        <img src="Card5.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=50">
+
+            <div>
+                <h4>TECHNO GAMERZ BUILD A BIGGEST FUTURISTIC HOUSE</h4>
+                <p>Techno Gamerz</p>
+                <span>950K views • 1 week ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="video-card music">
+        <img src="Card6.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=60">
+
+            <div>
+                <h4>NA JA Song</h4>
+                <p>White Music</p>
+                <span>1.5M views • 2 months ago</span>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="video-card music">
+        <img src="Card7.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=10">
+
+            <div>
+                <h4>Sadi Sun Song</h4>
+                <p>Music Industry</p>
+                <span>1M views • 3 months ago</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-card music">
+        <img src="Card8.png">
+
+        <div class="video-info">
+            <img class="channel-logo" src="https://i.pravatar.cc/50?img=10">
+
+            <div>
+                <h4>Namo Namo Music 8k video</h4>
+                <p>White Hill Music</p>
+                <span>1.2M views • 6 months ago</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
